@@ -19,10 +19,11 @@ const app = express();
 
 // Middleware to handle cors
 app.use(cors({
-    origin: "*",
-    methods: ["GET", "PUT", "DELETE", "POST"],
-    allowedHeaders: ["Content-type", "Authorization"],
-}))
+  origin: "https://frontend-interview-prep-ai.onrender.com",
+  methods: ["GET", "PUT", "DELETE", "POST"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
 
 connectDB()
 
